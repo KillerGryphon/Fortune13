@@ -62,6 +62,7 @@
 #define F13VETRANGER	 (1<<14)
 #define F13RANGER	 	 (1<<15)
 #define F13MP            (1<<16)
+#define F13NCRSUPERMUTANT (1<<17)
 
 #define LEGION			(1<<4)
 
@@ -125,8 +126,7 @@
 #define F13AI			(1<<7)
 #define F13CYBORG		(1<<8)
 
-#define WASTELAND		(1<<8)
-
+#define WASTELAND		(1<<9)
 #define F13CULTLEADER	(1<<0)
 #define F13WASTELANDER	(1<<1)
 #define F13RAIDER		(1<<2)
@@ -136,6 +136,8 @@
 #define EVENTCOVEN		(1<<6)
 #define F13VIGILANTE	(1<<7)
 #define F13ADMINBOOS	(1<<8)
+#define F13SMRAIDER		(1<<9)
+#define F13SMWASTELANDER (1<<10)
 
 #define ENCLAVE			(1<<9)
 
@@ -304,3 +306,7 @@
 #define JOB_DISPLAY_ORDER_FOLLOWERGUARD 112
 #define JOB_DISPLAY_ORDER_FOLLOWERVOLUNTEER 113
 #define JOB_DISPLAY_ORDER_PROFESSOR 114
+
+#define JOB_DISPLAY_ORDER_NCRSUPERMUTANT 
+#define JOB_DISPLAY_ORDER_SMRAIDER
+#define JOB_DISPLAY_ORDER_SMWASTELANDER

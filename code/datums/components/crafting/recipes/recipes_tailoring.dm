@@ -35,6 +35,89 @@
 	category = CAT_CLOTHING
 	subcategory = CAT_ARMOR
 
+
+/datum/crafting_recipe/crusher
+	name = "Super Mutant Crusher Armor"
+	result = /obj/item/clothing/smarmor/armor/f13/smcrusher
+	reqs = list(/obj/item/stack/crafting/metalparts = 5,
+				/obj/item/stack/sheet/plasteel = 2,
+				/obj/item/stack/crafting/goodparts = 5)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_availible = FALSE
+
+/datum/crafting_recipe/warrior
+	name = "Super Mutant Warrior Armor"
+	result = /obj/item/clothing/smarmor/armor/f13/smwarrior
+	reqs = list(/obj/item/stack/crafting/metalparts = 5,
+				/obj/item/stack/sheet/plasteel = 2,
+				/obj/item/stack/crafting/goodparts = 5)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_availible = FALSE
+
+/datum/crafting_recipe/gladiator
+	name = "Super Mutant Gladiator Armor"
+	result = /obj/item/clothing/smarmor/armor/f13/smgladiator
+	reqs = list(/obj/item/clothing/smarmor/armor/f13/smcrusher = 1,
+				/obj/item/stack/crafting/metalparts = 5,
+				/obj/item/stack/crafting/goodparts = 10)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_availible = FALSE
+
+/datum/crafting_recipe/smlt
+	name = "Super Mutant Lieutenant Armor"
+	result = /obj/item/clothing/smarmor/armor/f13/smlt
+	reqs = list(/obj/item/clothing/smarmor/armor/f13/smwarrior = 1,
+				/obj/item/stack/sheet/plasteel = 5,
+				/obj/item/stack/crafting/goodparts = 5,
+				/obj/item/stack/crafting/metalparts = 5,
+				/obj/item/stack/crafting/electronicparts = 5)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_availible = FALSE
+
+/datum/crafting_recipe/smleather
+	name = "Super Mutant Leather Armor"
+	result = /obj/item/clothing/smarmor/armor/f13/smleather
+	reqs = list(/obj/item/stack/sheet/leather = 5,
+				/obj/item/stack/crafting/metalparts = 3)
+	tools = list(TOOL_WORKBENCH)
+	time = 60
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_availible = FALSE
+
+/datum/crafting_recipe/smyeti
+	name = "Super Mutant Yeti Clothing"
+	result = /obj/item/clothing/smarmor/armor/f13/smyeti
+	reqs = list(/obj/item/stack/sheet/cloth = 5,
+				/obj/item/stack/crafting/metalparts = 3)
+	tools = list(TOOL_WORKBENCH)
+	time = 30
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_availible = FALSE
+
+/datum/crafting_recipe/smcasual
+	name = "Super Mutant Casual Clothing"
+	result = /obj/item/clothing/smarmor/armor/f13/smcasual
+	reqs = list(/obj/item/stack/sheet/cloth = 8)
+	tools = list(TOOL_WORKBENCH)
+	time = 15
+	category = CAT_CLOTHING
+	subcategory = CAT_ARMOR
+	always_availible = FALSE
+
 /datum/crafting_recipe/armor_plate_deathclaw
 	name = "Armor Plate"
 	result = /obj/item/stack/crafting/armor_plate

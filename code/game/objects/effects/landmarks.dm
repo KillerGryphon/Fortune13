@@ -581,6 +581,9 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	name = "NCR Off-Duty"
 	icon_state = "NCR Trooper"
 
+/obj/effect/landmark/start/f13/ncrsupermutant
+	name = "NCR Super Mutant"
+	icon_state = "NCR Trooper"
 // Legion
 
 /obj/effect/landmark/start/f13/legate
@@ -778,9 +781,17 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	name = "Wastelander"
 	icon_state = "Wastelander"
 
+/obj/effect/landmark/start/f13/smwastelander
+	name = "Super Mutant Wastelander"
+	icon_state = "Wastelander"
+
 /obj/effect/landmark/start/f13/raider
 	name = "Outlaw"
 	icon_state = "Raider"
+
+/obj/effect/landmark/start/f13/smraider
+	name = "Super Mutant Outlaw"
+	icon_state = "Raider"	
 
 /obj/effect/landmark/start/f13/pusher
 	name = "Great Khan"
