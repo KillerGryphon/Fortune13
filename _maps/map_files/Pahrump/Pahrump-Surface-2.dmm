@@ -9200,6 +9200,15 @@
 	icon_state = "wasteland33"
 	},
 /area/f13/wasteland)
+"fWQ" = (
+/obj/effect/decal/cleanable/dirt{
+	color = "000000"
+	},
+/obj/effect/landmark/start/f13/ncrsupermutant,
+/turf/open/floor/f13/wood{
+	icon_state = "housewood2"
+	},
+/area/f13/ncr)
 "fXs" = (
 /obj/structure/grille,
 /obj/structure/window/fulltile,
@@ -28069,6 +28078,12 @@
 /obj/effect/spawner/lootdrop/f13/attachments,
 /turf/open/floor/f13/wood,
 /area/f13/village)
+"rHA" = (
+/obj/effect/landmark/start/f13/smwastelander,
+/turf/open/indestructible/ground/outside/road{
+	icon_state = "horizontalinnermain0"
+	},
+/area/f13/tunnel)
 "rHO" = (
 /obj/effect/spawner/lootdrop/f13/alcoholspawner,
 /turf/open/floor/f13/wood,
@@ -39624,7 +39639,7 @@ gcK
 mGC
 sTC
 rEi
-vDP
+rHA
 pnz
 gjC
 mGC
@@ -41539,7 +41554,7 @@ kzs
 sed
 kzs
 kzs
-kzs
+fWQ
 xMa
 xEc
 unI

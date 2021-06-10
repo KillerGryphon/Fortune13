@@ -15800,7 +15800,8 @@
 /turf/open/floor/plasteel/f13/vault_floor/misc/vaultrust,
 /area/f13/bunker)
 "mXW" = (
-/obj/structure/reagent_dispensers/barrel/dangerous,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/start/f13/smraider,
 /turf/open/floor/f13{
 	icon_state = "greenrustyfull"
 	},
@@ -66384,7 +66385,7 @@ tur
 tur
 cMl
 miI
-mXW
+miI
 chW
 tGe
 jMR
@@ -66897,7 +66898,7 @@ uoO
 tur
 tvc
 miI
-wWF
+mXW
 mUb
 iRc
 fvp
