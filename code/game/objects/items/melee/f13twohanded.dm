@@ -578,6 +578,17 @@ var/list/possible_colors = list("red")
 			user.dropItemToGround(src, TRUE)
 			user.Knockdown(50)
 		return
+
+
+/obj/item/twohanded/spear/pickup(mob/living/carbon/human/user)
+	. = ..()
+	var/mob/living/carbon/human/U = user
+	if(U.job in list("Chief", "Shaman", "Head Hunter", "Druid", "Villager", "Hunter", "Spirit-Pledged", ))
+		src.reach = 2
+	else
+		src.reach = 1
+		return
+	
 /*
 /obj/item/twohanded/sledgehammer/marsstaff/unwield() //Specific unwield () to switch hitsounds.
 	sharpness = SHARP_NONE
