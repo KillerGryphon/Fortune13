@@ -3,8 +3,6 @@
 	id = "smutant"
 	say_mod = "yells"
 	limbs_id = "smutant"
-	var/whitelistedsupermutants = 1 		//Restricts the species to certain players
-	var/whitelistsupermutants = list() 		//List the ckeys that can use this species, if it's whitelisted.: list("John Doe", "poopface666", "SeeALiggerPullTheTrigger") Spaces & capitalization can be included or ignored entirely for each key as it checks for both.
 	species_traits = list(NOTRANSSTING,NOGENITALS,NOAROUSAL)
 	inherent_traits = list(TRAIT_RADIMMUNE,TRAIT_VIRUSIMMUNE)
 	inherent_biotypes = list(MOB_INORGANIC, MOB_HUMANOID)
@@ -35,6 +33,18 @@
 		return 0
 	if(rank in GLOB.brotherhood_positions) //Kill it with fire.
 		return 0
-	if(rank in GLOB.vault_positions) //How did they even get in??.
+	if(rank in GLOB.vault_positions) //How did they even get in??
 		return 0
+	if(rank in GLOB.den_positions) //Super Mutants tend to attract attention, bad for the town.
+		return 0
+	if(rank in GLOB.ncr_positions) //Camp Miller wasn't expecting special forces
+		return 0
+	if(rank in GLOB.wasteland_positions) //Calling a Super Mutant just a waster is generally a bad idea.
+		return 0
+	if(rank in GLOB.tribal_positions) //The isolation of the tribe has prevented Super Mutants from being a part of them.
+		return 0
+	if(rank in GLOB.followers_positions) //Followers don't have anything against intelligent super mutants, but they don't have any within their ranks in Pahrump.
+		return 0
+	if(rank in GLOB.enclave_positions) //DIE MUTIE!!
+		return 0			
 	return ..()
