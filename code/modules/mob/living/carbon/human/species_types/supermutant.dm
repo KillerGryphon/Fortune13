@@ -6,7 +6,7 @@
 	species_traits = list(NOTRANSSTING,NOGENITALS,NOAROUSAL)
 	inherent_traits = list(TRAIT_RADIMMUNE,TRAIT_VIRUSIMMUNE,TRAIT_BIG_LEAGUES,TRAIT_HARD_YARDS,TRAIT_LIFEGIVER)
 	inherent_biotypes = list(MOB_INORGANIC, MOB_HUMANOID)
-	no_equip = list(SLOT_WEAR_MASK, SLOT_W_UNIFORM, SLOT_GLOVES, SLOT_SHOES)
+	no_equip = list(SLOT_WEAR_MASK)
 	punchdamagelow = 10
 	punchdamagehigh = 24 //super mutants hit hard
 	punchstunthreshold = 20
@@ -37,6 +37,8 @@
 		return 0
 	if(rank in GLOB.den_positions) //Super Mutants tend to attract attention, bad for the town.
 		return 0
+	if(rank in GLOB.den_command_positions) //Super Mutants tend to attract attention, even more if they're mayor or.
+		return 0	
 	if(rank in GLOB.ncr_positions) //Camp Miller wasn't expecting special forces
 		return 0
 	if(rank in GLOB.wasteland_positions) //Calling a Super Mutant just a waster is generally a bad idea.
@@ -46,5 +48,7 @@
 	if(rank in GLOB.followers_positions) //Followers don't have anything against intelligent super mutants, but they don't have any within their ranks in Pahrump.
 		return 0
 	if(rank in GLOB.enclave_positions) //DIE MUTIE!!
+		return 0
+	if(rank in GLOB.khan_positions) //Super Mutants could take ANY beatdown the Khans could give, so they're not allowing any in.
 		return 0			
 	return ..()

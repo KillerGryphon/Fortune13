@@ -1,8 +1,5 @@
-/*
-*/
-
 /datum/job/supermutants //do NOT use this for anything, it's just to store faction datums.
-	department_flag = Supermutants
+	department_flag = SUPERMUTANTS
 	selection_color = "#26ad22"
 
 	access = list()
@@ -11,12 +8,6 @@
 
 	objectivesList = list("You are a remnant of the Master's Army, or of the Enclave's experiments with FEV. Now, you are free from the direct influence of both, the former destroyed, and the latter a shell of their former selves. You alone now decide your path.")
 
-/datum/outfit/job/supermutant
-	name = 		"supermutantdatums"
-	jobtype = 	/datum/job/supermutant
-	backpack = 	/obj/item/storage/backpack/satchel/explorer
-	satchel = 	/obj/item/storage/backpack/satchel/explorer
-	box = 		/obj/item/storage/survivalkit
 
 /datum/outfit/job/supermutants/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -67,10 +58,13 @@ NCR Super Mutant
 /datum/outfit/job/f13ncrsupermutant
 	name 	= "NCR Super Mutant"
 	id 		= /obj/item/card/id/dogtag/ncrtrooper
+	uniform = /obj/item/clothing/under/f13/ncr
 	jobtype = /datum/job/supermutants/f13ncrsupermutant
 	belt 	= /obj/item/storage/belt/military/assault/ncr
 	neck 	= /obj/item/storage/belt/holster
 	ears 	= /obj/item/radio/headset/headset_ncr
+	backpack = /obj/item/storage/backpack/trekker
+	satchel = /obj/item/storage/backpack/satchel/trekker
 	backpack_contents = list(
 		/obj/item/storage/bag/money/small/settler = 1, \
 		/obj/item/kitchen/knife/combat = 1, \
@@ -78,7 +72,7 @@ NCR Super Mutant
 
 /datum/outfit/loadout/ranger
 	name = "Super Mutant Patrol Ranger" //You don't need Ranger takedown, you ARE the takedown.
-	suit = /obj/item/clothing/smarmor/armor/f13/ncr_smranger
+	suit = /obj/item/clothing/suit/armor/f13/ncr_smranger
 	belt =	/obj/item/storage/belt/military/assault/ncr
 	suit_store = /obj/item/gun/ballistic/automatic/service/carbine
 	backpack_contents = list(
@@ -93,7 +87,7 @@ NCR Super Mutant
 
 /datum/outfit/loadout/trooper
 	name = "Super Mutant NCR Trooper" //The heavy trooper's larger cousin.
-	suit = /obj/item/clothing/smarmor/armor/f13/smncr
+	suit = /obj/item/clothing/suit/armor/f13/smncr
 	belt =	/obj/item/storage/belt/military/assault/ncr
 	suit_store = /obj/item/gun/ballistic/automatic/service
 	accessory =     /obj/item/clothing/accessory/ncr/TPR
@@ -129,28 +123,21 @@ Super Mutant Outlaw
 	/datum/outfit/loadout/supermutant_crusher)
 
 /datum/outfit/job/wasteland/f13smraider
-	name = "Outlaw"
+	name = "Super Mutant Outlaw"
 	jobtype = /datum/job/wasteland/f13smraider
 
 	id			= null
 	ears 		= null
 	belt 		= null
+	uniform 	= /obj/item/clothing/under/f13/raider_leather
 	backpack 	= /obj/item/storage/backpack/satchel/explorer
 	satchel 	= /obj/item/storage/backpack/satchel/explorer
-	box 		= /obj/item/storage/survivalkit\
+	box 		= /obj/item/storage/survivalkit
 
-
-/datum/outfit/job/wasteland/f13smraider/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	..()
-	if(visualsOnly)
-		return
-
-	H.social_faction = "Raiders"
-	add_verb(H, /mob/living/proc/creategang)
 
 /datum/outfit/loadout/supermutant_warrior
 	name = "Warrior"
-	suit = /obj/item/clothing/smarmor/armor/f13/smwarrior
+	suit = /obj/item/clothing/suit/armor/f13/smwarrior
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/service,
 		/obj/item/ammo_box/magazine/m556/rifle/assault=3,
@@ -158,7 +145,7 @@ Super Mutant Outlaw
 
 /datum/outfit/loadout/supermutant_crusher
 	name = "Crusher"
-	suit = /obj/item/clothing/smarmor/armor/f13/smcrusher
+	suit = /obj/item/clothing/suit/armor/f13/smcrusher
 	backpack_contents = list(
 		/obj/item/twohanded/fireaxe/bmprsword,
 		/obj/item/gun/ballistic/automatic/pistol/n99=1,
@@ -192,7 +179,6 @@ Super Mutant Wasterlander
 /datum/outfit/job/wasteland/f13smwastelander
 	name = "Wastelander"
 	jobtype = /datum/job/wasteland/f13smwastelander
-
 	id = null
 	ears = null
 	belt = null
@@ -201,7 +187,7 @@ Super Mutant Wasterlander
 
 /datum/outfit/loadout/vault_mutant
 	name = "Vaultie Super Mutant"
-	uniform = /obj/item/clothing/smarmor/armor/f13/smvault
+	uniform = /obj/item/clothing/under/armor/f13/smvault
 	backpack_contents = list(
 		/obj/item/pda=1,
 		/obj/item/gun/ballistic/automatic/pistol/n99=1,
@@ -210,8 +196,8 @@ Super Mutant Wasterlander
 
 /datum/outfit/loadout/wanderer
 	name = "Super Mutant wanderer"
-	suit = /obj/item/clothing/smarmor/armor/f13/smcasual
+	uniform = /obj/item/clothing/under/armor/f13/smcasual
 	l_hand = /obj/item/gun/ballistic/automatic/varmint
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m556/rifle=2
+		/obj/item/ammo_box/magazine/m556/rifle=2,
 		/obj/item/claymore/machete/reinforced=1)

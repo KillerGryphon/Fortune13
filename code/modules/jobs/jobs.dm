@@ -93,8 +93,9 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Legion Recruit Decanus",
 "Legion Scout",
 "Legion Explorer",
-"Auxilia",
+"Household Slave",
 "Legion Slave",
+"Camp Duty",
 
 "Mayor",
 "Sheriff",
@@ -120,7 +121,11 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Vault-tec Doctor",
 "Vault-tec Scientist",
 "Vault-tec Security",
-"Vault-tec Engineer"
+"Vault-tec Engineer",
+
+"Super Mutant Outlaw",
+"Super Mutant Wastlander",
+"NCR Super Mutant"
 ))
 
 GLOBAL_LIST_INIT(faction_player_positions, list(
@@ -137,8 +142,9 @@ GLOBAL_LIST_INIT(faction_player_positions, list(
 "Legion Recruit Decanus",
 "Legion Scout",
 "Legion Explorer",
-"Auxilia",
+"Household Slave",
 "Legion Slave",
+"Camp Duty",
 
 "Deputy",
 "Shopkeeper",
@@ -156,14 +162,21 @@ GLOBAL_LIST_INIT(faction_player_positions, list(
 "Vault-tec Doctor",
 "Vault-tec Scientist",
 "Vault-tec Security",
-"Vault-tec Engineer"
+"Vault-tec Engineer",
+
+"Super Mutant Outlaw",
+"Super Mutant Wastlander",
+"NCR Super Mutant"
 ))
 
 //Whitelisted positions list FO13 anything that shows up here requires that the user have an entry in the 'role_whitelist' table of id,ckey,"antagonist"
 GLOBAL_LIST_INIT(antagonist_whitelist_positions, list(
 	"Raider",
 	"Outlaw",
-	"Great Khan" //DA KHANZ, BAY BEEEEEEE
+))
+
+GLOBAL_LIST_INIT(khan_positions, list(
+	"Great Khan" //Khans get their own thing because the positions right above was unreachable and Super Mutants can't be Khans.
 ))
 
 GLOBAL_LIST_INIT(brotherhood_paladin_positions, list(
@@ -223,8 +236,8 @@ GLOBAL_LIST_INIT(legion_positions, list(
 	"Legion Recruit Decanus",
 	"Recruit Legionnaire",
 	"Legion Explorer",
-	"Auxilia",
-	"Camp Follower",
+	"Household Slave",
+	"Camp Duty",
 	"Legion Slave",
 	"Legion Vexillarius",
 	"Legion Centurion",
@@ -277,7 +290,6 @@ GLOBAL_LIST_INIT(ncr_positions, list(
 	"NCR Veteran Ranger",
 	"NCR Ranger",
 	"NCR Military Police",
-	"NCR Super Mutant"
 ))
 
 GLOBAL_LIST_INIT(vault_command_positions, list(
@@ -296,10 +308,8 @@ GLOBAL_LIST_INIT(vault_positions, list(
 
 GLOBAL_LIST_INIT(wasteland_positions, list(
 	"Outlaw",
-	"Super Mutant Outlaw",
 	"Faithful",
 	"Wastelander",
-	"Super Mutant Wastlander",
 	"Vigilante"
 ))
 
@@ -338,7 +348,11 @@ GLOBAL_LIST_INIT(followers_positions, list(
 	"Followers Administrator"
 ))
 
-
+GLOBAL_LIST_INIT(supermutant_positions, list(
+	"Super Mutant Outlaw",
+	"Super Mutant Wastlander",
+	"NCR Super Mutant"
+))
 
 GLOBAL_LIST_INIT(exp_jobsmap, list(
 	EXP_TYPE_CREW = list("titles" = command_positions | engineering_positions | medical_positions | science_positions | supply_positions | security_positions | civilian_positions | list("AI","Cyborg")), // crew positions
@@ -351,9 +365,9 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
 	EXP_TYPE_SILICON = list("titles" = list("AI","Cyborg")),
 	EXP_TYPE_SERVICE = list("titles" = civilian_positions),
 
-	EXP_TYPE_FALLOUT       = list("titles" = brotherhood_positions | den_positions | legion_positions | ncr_positions | vault_positions | wasteland_positions | tribal_positions | followers_positions | enclave_positions),
+	EXP_TYPE_FALLOUT       = list("titles" = brotherhood_positions | den_positions | legion_positions | ncr_positions | vault_positions | wasteland_positions | tribal_positions | followers_positions | enclave_positions | supermutant_positions),
 
-	EXP_TYPE_OUTLAW        = list("titles" = list("Outlaw")),
+	EXP_TYPE_OUTLAW        = list("titles" = antagonist_whitelist_positions),
 	EXP_TYPE_BROTHERHOOD   = list("titles" = brotherhood_positions),
 	EXP_TYPE_DEN           = list("titles" = den_positions ),
 	EXP_TYPE_LEGION        = list("titles" = legion_positions),
@@ -363,6 +377,7 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
 	EXP_TYPE_TRIBAL        = list("titles" = tribal_positions),
 	EXP_TYPE_FOLLOWERS     = list("titles" = followers_positions),
 	EXP_TYPE_ENCLAVE       = list("titles" = enclave_positions),
+	EXP_TYPE_SUPERMUTANT   = list("titles" = supermutant_positions),
 
 	EXP_TYPE_RANGER        = list("titles" = list("NCR Veteran Ranger","NCR Ranger")),
 	EXP_TYPE_SCRIBE        = list("titles" = list("Scribe")),

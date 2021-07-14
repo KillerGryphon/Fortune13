@@ -36,6 +36,10 @@
 	RegisterSignal(src, COMSIG_COMPONENT_CLEAN_ACT, /atom.proc/clean_blood)
 	GLOB.human_list += src
 
+/datum/species/ghoul/qualifies_for_rank(rank, list/features)
+	if(rank in GLOB.supermutant_positions) // You haven't taken an FEV bath, you're not a Super Mutant.
+		return 0
+	return ..()
 
 /mob/living/carbon/human/ComponentInitialize()
 	. = ..()
